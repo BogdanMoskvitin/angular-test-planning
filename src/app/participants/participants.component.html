@@ -1,0 +1,81 @@
+<div class="participants">
+    <div>
+        <p class="participants__title">Доступные участники</p>
+        <div class="participants__form">
+            <form>
+                <div class="participants__flex_form">
+                    <input class="participants__input" placeholder="Поиск">
+                    <div class="participants__box_select">
+                        <label class="participants__label">Группа</label>
+                        <select class="participants__select">
+                            <option>Администрирование</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="participants__flex_form">
+                    <div class="participants__box_select">
+                        <label class="participants__label">Должность</label>
+                        <select class="participants__select">
+                            <option>Менеджер по персон...</option>
+                        </select>
+                    </div>
+                    <div class="participants__box_select">
+                        <label class="participants__label">Стаж</label>
+                        <select class="participants__select">
+                            <option>3-10 лет</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="participants__flex_filter">
+            <p class="participants__subtitle">42 пользователя</p>
+            <a class="participants__customize" (click)="showAlert('customize')">
+                <img src="../../assets/img/filter.png" alt="filter">
+                <span class="participants__customize_text">Настроить</span>
+            </a>
+            <a class="participants__reset" (click)="showAlert('reset')">
+                <img src="../../assets/img/cross.png" alt="cross">
+                <span class="participants__reset_text">Сбросить</span>
+            </a>
+        </div>
+
+        <label class="participants__label_checkbox">
+            <div class="participant__flex">
+                <input class="participants__input_checkbox" type="checkbox" name="g">
+                <span class="participants__btn_checkbox"></span>
+                <span style="margin-left: 8px;" class="participants__text_checkbox">Все пользователи</span>
+            </div>
+        </label>
+
+        <label class="participants__label_checkbox" *ngFor="let user of users">
+            <div class="participant__flex">
+                <input class="participants__input_checkbox" type="checkbox" name="g">
+                <span class="participants__btn_checkbox"></span>
+                <span style="margin-left: 44px;" class="participants__text_checkbox">{{user}}</span>
+            </div>
+        </label>
+    </div>
+
+    <div>
+        <p style="margin-bottom: 28px" class="participants__title">Участники мероприятия</p>
+        <label class="participants__label_checkbox">
+            <div class="participant__flex">
+                <input class="participants__input_checkbox" type="checkbox" name="g">
+                <span class="participants__btn_checkbox"></span>
+                <span style="margin-left: 8px;" class="participants__text_checkbox">Все пользователи</span>
+            </div>
+            <a class="participants__basket_checkbox" (click)="showAlert('basket')"></a>
+        </label>
+
+        <label class="participants__label_checkbox" *ngFor="let user of users">
+            <div class="participant__flex">
+                <input class="participants__input_checkbox" type="checkbox" name="g">
+                <span class="participants__btn_checkbox"></span>
+                <span style="margin-left: 44px;" class="participants__text_checkbox">{{user}}</span>
+            </div>
+            <a class="participants__basket_checkbox" (click)="showAlert('basket')"></a>
+        </label>
+    </div>
+</div>

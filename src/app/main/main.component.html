@@ -1,0 +1,135 @@
+<div class="main">
+    <label class="main__label_select">Программа</label>
+    <select class="main__select_long">
+        <option class="main__program">Страхование с заботой о клиенте</option>
+    </select>
+
+    <p class="main__title">Мероприятие, дата и время проведения</p>
+
+    <label class="main__label_input">Мероприятие</label>
+    <input class="main__input_long" placeholder="Главные правила продаж  Тренинг">
+
+    <div class="main__cells">
+        <div class="main__cell">
+            <p class="main__subtitle_input">Дата</p>
+
+            <div class="main__box_input">
+                <img src="../../assets/img/date.png" alt="date">
+                <input class="main__input_short" value="28 окт">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <p class="main__subtitle_input">Время</p>
+
+            <div class="main__box_input">
+                <img src="../../assets/img/time.png" alt="time">
+                <input class="main__input_short" value="9:00">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <p class="main__subtitle_input">Тренер</p>
+
+            <div class="main__box_input">
+                <img src="../../assets/img/avatar.png" alt="avatar">
+                <select class="main__select_short">
+                    <option class="main__program">Сергей Ефремов</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <label class="main__label_input">Мероприятие</label>
+    <input class="main__input_long" placeholder="Страхование без потерь  Тренинг">
+
+    <div class="main__cells">
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/date.png" alt="date">
+                <input style="color: rgba(0, 0, 0, 0.38);" class="main__input_short" value="Дата">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/time.png" alt="time">
+                <input style="color: rgba(0, 0, 0, 0.38);" class="main__input_short" value="Время">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/avatar.png" alt="avatar">
+                <select style="color: rgba(0, 0, 0, 0.38);" class="main__select_short">
+                    <option class="main__program">Тренер</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <label class="main__label_input">Мероприятие</label>
+    <input class="main__input_long" placeholder="Страховой случай или как помочь клиенту   Тренинг">
+
+    <div class="main__cells">
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/date.png" alt="date">
+                <input style="color: rgba(0, 0, 0, 0.38);" class="main__input_short" value="Дата">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/time.png" alt="time">
+                <input style="color: rgba(0, 0, 0, 0.38);" class="main__input_short" value="Время">
+                <a class="main__cross" (click)="showAlert('cross')"></a>
+            </div>
+        </div>
+
+        <div class="main__cell">
+            <div class="main__box_input">
+                <img src="../../assets/img/avatar.png" alt="avatar">
+                <select style="color: rgba(0, 0, 0, 0.38);" class="main__select_short">
+                    <option class="main__program">Тренер</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <p class="main__title">Условия записи по коду</p>
+
+    <div>
+        <label class="main__radio">
+            <input class="main__input_radio" type="radio" name="g" checked>
+            <span class="main__btn_radio"></span> 
+            <span class="main__text_radio">Не использовать код доступа</span>
+        </label>
+    </div>
+    <div>
+        <label class="main__radio">
+            <input class="main__input_radio" type="radio" name="g">
+            <span class="main__btn_radio"></span> 
+            <span class="main__text_radio">Требовать регистрацию</span>
+        </label>
+    </div>
+    <div>
+        <label class="main__radio">
+            <input class="main__input_radio" type="radio" name="g">
+            <span class="main__btn_radio"></span> 
+            <span class="main__text_radio">Запросить только имя и фамилию</span>
+        </label>
+    </div>
+    <div>
+        <label class="main__radio">
+            <input class="main__input_radio" type="radio" name="g">
+            <span class="main__btn_radio"></span> 
+            <span class="main__text_radio">Не требовать регистрацию, имя и фамилию</span>
+        </label>
+    </div>
+</div>

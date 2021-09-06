@@ -1,0 +1,77 @@
+<div class="group">
+    <form>
+        <button class="group__search-mobile">Поиск
+            <img style="float: right;" src="../../assets/img/filter-white.png" alt="filter">
+        </button>
+
+        <div class="group__cell_select-mobile">
+            <label class="group__label">Сортировка</label>
+            <select class="group__select-mobile">
+                <option class="group__program">По прогрессу обучения</option>
+            </select>
+        </div>
+
+        <div class="group__form">
+            <div class="group__cell_form">
+                <input class="group__search" placeholder="Поиск"/>
+            </div>
+            <div class="group__cell_form">
+                <label class="group__label">Программа</label>
+                <select class="group__select">
+                    <option class="group__program">Все</option>
+                </select>
+            </div>
+            <div class="group__cell_form">
+                <label class="group__label">Период</label>
+                <select class="group__select">
+                    <option class="group__period">Июнь 2019</option>
+                </select>
+            </div>
+            <div class="group__cell_form">
+                <label class="group__label">Статус</label>
+                <select class="group__select">
+                    <option class="group__status">Все</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <div class="group__box_filter">
+        <p class="group__session">34 сессии</p>
+        <a class="group__filter_btn" (click)="showAlert('filter')">
+            <img src="../../assets/img/filter.png" alt="filter">
+            <span class="group__filter_title">Настроить фильтр</span>
+        </a>
+        <a class="group__reset_btn" (click)="showAlert('reset')">
+            <img src="../../assets/img/cross.png" alt="cross">
+            <span class="group__reset_title">Сбросить</span>
+        </a>
+    </div>
+
+    <table class="group__tabel_desktop">
+        <tr class="group__tr_titles">
+            <td class="group__td_date">Дата начала</td>
+            <td class="group__td_name">Название</td>
+            <td class="group__td_participants">Участников</td>
+            <td class="group__td_trainer">Тренер</td>
+            <td class="group__td_progress">Прогресс</td>
+            <td class="group__td_btn"></td>
+        </tr>
+        <tr class="group__tr_data" *ngFor="let group of groupsDesktop">
+            <td *ngFor="let item of group">{{item}}</td>
+            <td><a class="group__td_points" (click)="showAlert('points')"><img src="../../assets/img/points.png" alt="points"></a></td>
+        </tr>
+    </table>
+
+    <table class="group__tabel_mobile">
+        <tr class="group__tr_titles">
+            <td class="group__td_date">Дата начала</td>
+            <td class="group__td_name">Название</td>
+            <td class="group__td_participants">Уч.</td>
+            <td class="group__td_progress">Прогресс</td>
+        </tr>
+        <tr class="group__tr_data" *ngFor="let group of groupsMobile">
+            <td *ngFor="let item of group">{{item}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,15 @@
+<div class="toshedule">
+    <div class="toshedule__header">
+        <p class="toshedule__title">Планирование</p>
+        <div>
+            <a class="toshedule__check" routerLink="/planning"></a>
+            <a class="toshedule__cross" routerLink="/planning"></a>
+        </div>
+    </div>
+    <a class="toshedule__main_btn" routerLink="./main" routerLinkActive="active">Основное</a>
+    <a class="toshedule__participants_btn" routerLink="./participants" routerLinkActive="active">Участники</a>
+    <div class="toshedule__line"></div>
+    <div class="toshedule__container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

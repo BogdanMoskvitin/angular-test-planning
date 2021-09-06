@@ -1,0 +1,30 @@
+<div class="planning">
+    <div class="planning__header">
+
+        <div class="planning__burger">
+            <button (click)='toggleSidebar()' class="burger">
+                <span [ngClass]="{'burger__line1': !opened, 'burger__line1_active': opened}"></span>
+                <span [ngClass]="{'burger__line2': !opened, 'burger__line2_active': opened}"></span>
+                <span [ngClass]="{'burger__line3': !opened, 'burger__line3_active': opened}"></span>
+                <span [ngClass]="{'burger__line4': !opened, 'burger__line4_active': opened}"></span>
+            </button>
+        </div>
+        <p class="planning__subtitle">Обучение</p>
+
+        <a class="planning__btn" routerLink="/toshedule">
+            <img src="../../assets/img/plus.png" alt="plus">
+            <span class="planning__span-btn">Запланировать</span>
+        </a>
+    </div>
+    <div class="planning__body">
+        <p class="planning__nav">Главная   —   Планирование</p>
+        <div class="planning__box_title">
+            <img src="../../assets/img/title.png" alt="title">
+            <h1 class="planning__title">Планирование</h1>
+        </div>
+        <a class="planning__group_btn" routerLink="./group" routerLinkActive="active">Групповое</a>
+        <a class="planning__individual_btn" routerLink="./individual" routerLinkActive="active">Индивидуальное</a>
+        <div class="planning__line"></div>
+    </div>
+</div>
+<router-outlet></router-outlet>
